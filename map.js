@@ -36,7 +36,7 @@ function createInitMap(){
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
 	
-	myPolygon=new google.maps.Polygon({path:polygon_list});
+	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
 	map.addListener("click",function(e){
 		polygon_list.push(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()))
