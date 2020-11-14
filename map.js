@@ -86,7 +86,7 @@ function map_clear(){
 	}
 	marker_list=[]
 	myPolygon.setMap(null);
-	myPolygon=new google.maps.Polygon({path:polygon_list});
+	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
 	create_after_click();
 }
