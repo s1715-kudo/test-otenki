@@ -13,10 +13,9 @@
 
 .data_area {
 	position: absolute;
-	width: 100%;
+	width: 600px;
 	left: calc(50% - 300px);
 	top: 870px;
-	width: 600px;
 	margin: auto;
 	flex-wrap: wrap;
 	display: flex;
@@ -56,4 +55,36 @@ input:checked + .tab_class + .content_class {
 	width: 500px;
 	height: 500px;
 	margin: 0;
+}
+
+@media screen and (max-width:500px) {
+	.site_head{
+		width: 90%;
+		left: 5%;
+		top: 80px;
+	}
+	
+	#oita_img{
+		height:90%;
+		width:90%;
+	}
+	
+	.data_area {
+		width: 90%;
+		left: 5%;
+		top: 1050px;
+	}
+	
+	.tab_class {
+		width: calc(100%/4);
+	}
+	
+	.content_class {
+		width: 100%;
+	}
+	
+	#map,#map2{
+		width: 80%;
+	}
+
 }
