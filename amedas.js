@@ -9,7 +9,7 @@ function amedas(){
 		
 		insert += "<tr>"
 		for (const i of Object.keys(data[dateArray[0]])) {
-			insert += "<td align='center'>"+i+"</td>"
+			insert += "<th align='center'>"+i+"</th>"
 		}
 		insert += "</tr>"
 		

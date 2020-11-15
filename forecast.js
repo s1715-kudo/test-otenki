@@ -15,10 +15,10 @@ function forecast(){
 		var dateArray = Object.keys(data[fl[fn]])
 		for (const i of Object.keys(data[fl[fn]][dateArray[0]])) {
 			if(i!="icon"){
-				insert += "<td align='center'>"+i+"</td>"
+				insert += "<th align='center'>"+i+"</th>"
 			}
 			else if(i=="icon" && urlForecastIconKey!=0){
-				insert += "<td align='center' colspan='1'>天気</td>"
+				insert += "<th align='center'>天気</th>"
 			}
 		}
 		insert += "</tr>"
