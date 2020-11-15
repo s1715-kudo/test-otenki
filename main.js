@@ -36,3 +36,7 @@ function setKeyinit(key,value){
 	else if((typeof value)=="number")url_key=Number(url_key);
 	return url_key;
 }
+
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
