@@ -25,6 +25,7 @@ th{
 	flex-wrap: wrap;
 	display: flex;
 }
+
 .tab_class {
 	width: calc(100%/4);
 	height: 50px;

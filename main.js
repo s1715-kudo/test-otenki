@@ -14,6 +14,10 @@ $.getJSON(amedas_url, function(data){
 $.ajaxSetup({async: true});
 locate={lat:setKeyinit("map_lat",locate["lat"]),lng:setKeyinit("map_lng",locate["lng"])}
 
+window.onload = function() {
+	$("body").css("background","#"+setKeyinit('background_color','98FB98'));
+};
+
 function getDay(str) {
 	var dw=new Date (str).getDay();
 	var list=["日","月","火","水","木","金","土"];
