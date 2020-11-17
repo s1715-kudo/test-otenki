@@ -43,7 +43,7 @@ function forecast(){
 		}
 		document.getElementById('forecast_table').innerHTML=insert
 		});
-		document.getElementById('forecast_button').innerHTML=fl[(fn+1)%fl.length]
+		document.getElementById('forecast_button').innerHTML=fl[(fn+1)%fl.length]+"に切り替え"
 	});
 }
 

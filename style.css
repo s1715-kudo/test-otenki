@@ -1,5 +1,4 @@
 th{
-	//background-color:springgreen;
 	font-weight:bold;
 }
 
@@ -16,11 +15,18 @@ th{
 	width: 500px;
 }
 
+.site_fooder {
+	position: relative;
+	left: calc(50% - 250px);
+	top: 100px;
+	width: 500px;
+}
+
 .data_area {
 	position: absolute;
 	width: 600px;
 	left: calc(50% - 300px);
-	top: 870px;
+	top: 500px;
 	margin: auto;
 	flex-wrap: wrap;
 	display: flex;
@@ -68,19 +74,16 @@ input:checked + .tab_class + .content_class {
 	.site_head{
 		width: 90%;
 		left: 5%;
-		top: 100px;
+	}
+	.site_fooder {
+		width: 90%;
+		left: 5%;
 	}
 	
 	.data_area {
 		width: 90%;
 		left: 5%;
-		top: 900px;
-	}
-}
-
-@media screen and (max-width:700px) {
-	.data_area {
-		top: 1000px;
+		top: 600px;
 	}
 }
 
@@ -89,13 +92,13 @@ input:checked + .tab_class + .content_class {
 		top: 80px;
 	}
 	
+	.site_fooder {
+		top: 80px;
+	}
+	
 	#oita_img{
 		height:90%;
 		width:90%;
-	}
-	
-	.data_area {
-		top: 1050px;
 	}
 	
 	.tab_class {
