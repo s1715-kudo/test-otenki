@@ -29,7 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	console.log("0");
+	console.log("1");
 	var click_marker;
 	polygon_list=JSON.parse(Cookies.get("polygon"));
 	console.log(polygon_list)
@@ -38,7 +38,7 @@ function createInitMap(){
 	map.setMapTypeId(myMapTypeId);
 	for(var i=0;i<polygon_list.length;i++){
 		click_marker = new google.maps.Marker({
-			position: google.maps.LatLng(polygon_list[i]["lat"],polygon_list[i]["lng"]);
+			position: google.maps.LatLng(polygon_list[i]["lat"],polygon_list[i]["lng"])
 			map: map,
 			icon:"img/pin.png",
 		});
