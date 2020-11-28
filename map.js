@@ -29,7 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	console.log("9");
+	console.log("10");
 	var click_marker;
 	var polygon_json_list=JSON.parse(Cookies.get("polygon"));
 	map = new google.maps.Map(document.getElementById('map'), Options);
@@ -53,7 +53,6 @@ function createInitMap(){
 		});
 		marker_list.push(click_marker);
 		myPolygon.setPath(polygon_list);
-		console.log(google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡");
 	}
 	
 	map.addListener("click",function(e){

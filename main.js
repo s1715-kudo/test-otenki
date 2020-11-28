@@ -16,6 +16,7 @@ locate={lat:setKeyinit("map_lat",locate["lat"]),lng:setKeyinit("map_lng",locate[
 
 window.onload = function() {
 	$("body").css("background","#"+setKeyinit('background_color','98FB98'));
+	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 };
 
 function getDay(str) {
