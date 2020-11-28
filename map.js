@@ -19,7 +19,7 @@ function initMap(){
 		}
 	};
 	createInitMap();
-	viewInitMap();a
+	viewInitMap();
 }
 
 function viewInitMap(){
