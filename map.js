@@ -113,6 +113,7 @@ function new_list(list,n){
 
 function getPolygonJson(){
 	var jsonarray=JSON.parse(Cookies.get("polygon"));
+	console.log(jsonarray)
 	for(var i=0;i<jsonarray.length;i++){
 		jsonarray[i]["lng"]=Number(jsonarray[i]["lng"])
 		jsonarray[i]["lat"]=Number(jsonarray[i]["lat"])
