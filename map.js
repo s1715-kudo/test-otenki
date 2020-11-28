@@ -20,6 +20,8 @@ function initMap(){
 	};
 	createInitMap();
 	viewInitMap();
+	console.log(Cookies.get("polygon"))
+	console.log(Cookies.get("marker"))
 }
 
 function viewInitMap(){
