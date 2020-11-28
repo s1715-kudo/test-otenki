@@ -29,7 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	console.log("3");
+	console.log("4");
 	var click_marker;
 	polygon_list=JSON.parse(Cookies.get("polygon"));
 	console.log(polygon_list)
@@ -47,7 +47,7 @@ function createInitMap(){
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
-	if(polygon_list.length>0)document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
+	//if(polygon_list.length>0)document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	map.addListener("click",function(e){
 		polygon_list.push(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()))
 		click_marker = new google.maps.Marker({
@@ -67,6 +67,7 @@ function createInitMap(){
 
 function create_after_click(){
 	myPolygon.setPath(polygon_list);
+	console.log(polygon_list)
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	Cookies.set("polygon", JSON.stringify(polygon_list));
 }
