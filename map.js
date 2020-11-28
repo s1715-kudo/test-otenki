@@ -38,7 +38,7 @@ function createInitMap(){
 	map.setMapTypeId(myMapTypeId);
 	for(var i=0;i<polygon_list.length;i++){
 		click_marker = new google.maps.Marker({
-			position: polygon_list[i],
+			position: google.maps.LatLng(polygon_list[i]["lat"],polygon_list[i]["lng"]);
 			map: map,
 			icon:"img/pin.png",
 		});
