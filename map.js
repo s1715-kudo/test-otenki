@@ -42,6 +42,11 @@ function createInitMap(){
 			map: map,
 			icon:"img/pin.png",
 		});
+		click_marker.addListener("click",function(){
+			this.setMap(null);
+			delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
+			create_after_click();
+		});
 		marker_list.push(click_marker);
 	}
 	
