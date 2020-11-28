@@ -33,7 +33,7 @@ function createInitMap(){
 	var polygon_cookie_list=Cookies.get("polygon");
 	var polygon_json_list;
 	if(polygon_cookie_list==null || urlPolygonAutoSave!=1)polygon_json_list=[]
-	else polygon_json_list=JSON.parse();
+	else polygon_json_list=JSON.parse(polygon_cookie_list);
 	
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
