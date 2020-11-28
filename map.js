@@ -38,23 +38,20 @@ function createInitMap(){
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
-	
-	if(urlPolygonAuteSave==1){
-		for(var i=0;i<polygon_json_list.length;i++){
-			polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
-			click_marker = new google.maps.Marker({
-				position: polygon_json_list[i],
-				map: map,
-				icon:"img/pin.png",
-			});
-			click_marker.addListener("click",function(e){
-				this.setMap(null);
-				delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
-				create_after_click();
-			});
-			marker_list.push(click_marker);
-			myPolygon.setPath(polygon_list);
-		}
+	for(var i=0;i<polygon_json_list.length;i++){
+		polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
+		click_marker = new google.maps.Marker({
+			position: polygon_json_list[i],
+			map: map,
+			icon:"img/pin.png",
+		});
+		click_marker.addListener("click",function(e){
+			this.setMap(null);
+			delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
+			create_after_click();
+		});
+		marker_list.push(click_marker);
+		myPolygon.setPath(polygon_list);
 	}
 	
 	map.addListener("click",function(e){
