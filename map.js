@@ -31,7 +31,7 @@ function viewInitMap(){
 function createInitMap(){
 	console.log("0");
 	var click_marker;
-	polygon_list=getPolygonJson();
+	polygon_list=JSON.parse(Cookies.get("polygon"));
 	console.log(polygon_list)
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
@@ -109,16 +109,6 @@ function new_list(list,n){
 		}
 	}
 	return n_list;
-}
-
-function getPolygonJson(){
-	var jsonarray=JSON.parse(Cookies.get("polygon"));
-	console.log(jsonarray)
-	for(var i=0;i<jsonarray.length;i++){
-		jsonarray[i]["lng"]=Number(jsonarray[i]["lng"])
-		jsonarray[i]["lat"]=Number(jsonarray[i]["lat"])
-	}
-	return jsonarray;
 }
 
 function map_send(){
