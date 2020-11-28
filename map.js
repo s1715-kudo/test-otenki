@@ -58,6 +58,7 @@ function createInitMap(){
 function create_after_click(click_marker){
 	myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
+	save_cookie();
 }
 
 function delete_list(list){
@@ -99,6 +100,11 @@ function new_list(list,n){
 		}
 	}
 	return n_list;
+}
+
+function save_cookie(){
+	Cookies.set("polygon", polygon_list);
+	Cookies.set("marker", marker_list);
 }
 
 function map_send(){

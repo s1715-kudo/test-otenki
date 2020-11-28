@@ -2,6 +2,12 @@ function amedas(){
 	$(function(){
 		var insert=""
 		$.getJSON(amedas_url, function(data){
+		unit_list=[]
+		unit_list["気温"]="℃"
+		unit_list["降水量"]="mm"
+		unit_list["風速"]="m/s"
+		unit_list["日照時間"]="h"
+		unit_list["積雪深"]="cm"
 		
 		insert += "<table border='1'>"
 		var dateArray = Object.keys(data)
@@ -27,7 +33,10 @@ function amedas(){
 						if(_data<10)_data='0'+_data
 						_data+=":00"
 					}
-					insert += "<td align='center'>"+_data+"</td>"
+					unit_text=unit_list[j]
+					if(typeof unit_text==="undefined")unit_text=""
+					if(_data=="-")unit_text=""
+					insert += "<td align='center'>"+_data+unit_text+"</td>"
 				}
 			insert += "</tr>"
 			document.getElementById('place_name').innerHTML=data["場所"]["観測所名"]
