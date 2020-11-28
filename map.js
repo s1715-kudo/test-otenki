@@ -120,5 +120,6 @@ function new_list(list,n){
 
 function map_send(){
 	var input_message = document.map_form.map_comment.value;
+	Cookies.remove("polygon");
 	console.log(input_message);
 }
