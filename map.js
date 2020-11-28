@@ -47,7 +47,7 @@ function createInitMap(){
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
-	//if(polygon_list.length>0)document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
+	if(polygon_list.length>0)document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	map.addListener("click",function(e){
 		polygon_list.push(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()))
 		click_marker = new google.maps.Marker({
