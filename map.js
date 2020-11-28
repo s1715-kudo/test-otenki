@@ -30,7 +30,7 @@ function viewInitMap(){
 
 function createInitMap(){
 	var click_marker;
-	var polygon_json_list;
+	var polygon_json_list=[];
 	if(urlPolygonAuteSave==1){
 		polygon_json_list=JSON.parse(Cookies.get("polygon"));
 		if(polygon_json_list==null)polygon_json_list=[]
