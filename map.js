@@ -29,9 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	var test_list=JSON.parse(Cookies.get("polygon"))
-	console.log(test_list)
-	console.log(typeof(test_list))
+	var polygon_list=JSON.parse(Cookies.get("polygon"))
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	var marker = new google.maps.Marker({
 		map:map,
