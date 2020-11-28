@@ -31,6 +31,7 @@ function viewInitMap(){
 function createInitMap(){
 	polygon_list=Cookies.get("polygon")
 	console.log(polygon_list)
+	console.log(typeof(polygon_list))
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	var marker = new google.maps.Marker({
 		map:map,
