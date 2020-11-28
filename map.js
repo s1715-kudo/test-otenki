@@ -29,7 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	console.log("1");
+	console.log("2");
 	var click_marker;
 	polygon_list=JSON.parse(Cookies.get("polygon"));
 	console.log(polygon_list)
@@ -38,11 +38,12 @@ function createInitMap(){
 	map.setMapTypeId(myMapTypeId);
 	for(var i=0;i<polygon_list.length;i++){
 		click_marker = new google.maps.Marker({
-			position: google.maps.LatLng(polygon_list[i]["lat"],polygon_list[i]["lng"]),
+			position: polygon_list[i],
 			map: map,
 			icon:"img/pin.png",
 		});
 		marker_list.push(click_marker);
+		document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	}
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
@@ -57,14 +58,14 @@ function createInitMap(){
 		click_marker.addListener("click",function(){
 			this.setMap(null);
 			delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
-			create_after_click(click_marker);
+			create_after_click();
 		});
 		marker_list.push(click_marker);
-		create_after_click(click_marker);
+		create_after_click();
 	});
 }
 
-function create_after_click(click_marker){
+function create_after_click(){
 	myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	Cookies.set("polygon", JSON.stringify(polygon_list));
