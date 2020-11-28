@@ -29,8 +29,9 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	polygon_list=JSON.parse(Cookies.get("polygon"))
+	//polygon_list=JSON.parse(Cookies.get("polygon"))
 	map = new google.maps.Map(document.getElementById('map'), Options);
+	var click_marker;
 	var marker = new google.maps.Marker({
 		map:map,
 	});
@@ -41,7 +42,7 @@ function createInitMap(){
 	myPolygon.setMap(map);
 	map.addListener("click",function(e){
 		polygon_list.push(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()))
-		var click_marker = new google.maps.Marker({
+		click_marker = new google.maps.Marker({
 			position: e.latLng,
 			map: map,
 			icon:"img/pin.png",
