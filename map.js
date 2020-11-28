@@ -29,14 +29,18 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	//polygon_list=JSON.parse(Cookies.get("polygon"))
-	map = new google.maps.Map(document.getElementById('map'), Options);
 	var click_marker;
-	var marker = new google.maps.Marker({
-		map:map,
-	});
+	polygon_list=JSON.parse(Cookies.get("polygon"))
+	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
+	for(var i=0;i<polygon_list.length;i++){
+		click_marker = new google.maps.Marker({
+			position: polygon_list[i],
+			map: map,
+			icon:"img/pin.png",
+		});
+	}
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
