@@ -78,9 +78,9 @@ function createInitMap(){
 }
 
 function create_after_click(){
-	if(urlPolygonAutoSave==1)myPolygon.setPath(polygon_list);
+	myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
-	Cookies.set("polygon", JSON.stringify(polygon_list));
+	if(urlPolygonAutoSave==1)Cookies.set("polygon", JSON.stringify(polygon_list));
 }
 
 function delete_list(list){
