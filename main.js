@@ -2,7 +2,7 @@ var urlPlaceKey=setKeyinit('place','ume');
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
 var polygon_color="#"+setKeyinit('polygon_color','000000');
-var urlPolygonAuteSave=setKeyinit('polygon_auto_save',1);
+var urlPolygonAutoSave=setKeyinit('polygon_auto_save',1);
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"

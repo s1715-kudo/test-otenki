@@ -31,7 +31,7 @@ function viewInitMap(){
 function createInitMap(){
 	var click_marker;
 	var polygon_json_list=JSON.parse(Cookies.get("polygon"));
-	if(polygon_json_list==null || urlPolygonAuteSave!=1)polygon_json_list=[]
+	if(polygon_json_list==null || urlPolygonAutoSave!=1)polygon_json_list=[]
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
@@ -73,7 +73,7 @@ function createInitMap(){
 }
 
 function create_after_click(){
-	if(urlPolygonAuteSave==1)myPolygon.setPath(polygon_list);
+	if(urlPolygonAutoSave==1)myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	Cookies.set("polygon", JSON.stringify(polygon_list));
 }
