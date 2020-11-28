@@ -53,7 +53,7 @@ function createInitMap(){
 		});
 		marker_list.push(click_marker);
 		myPolygon.setPath(polygon_list);
-		document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
+		console.log(google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡");
 	}
 	
 	map.addListener("click",function(e){
