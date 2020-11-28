@@ -29,8 +29,10 @@ function viewInitMap(){
 }
 
 function createInitMap(){
+	console.log("0");
 	var click_marker;
 	polygon_list=getPolygonJson();
+	console.log(polygon_list)
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
