@@ -30,8 +30,10 @@ function viewInitMap(){
 
 function createInitMap(){
 	var click_marker;
-	var polygon_json_list=JSON.parse(Cookies.get("polygon"));
-	if(polygon_json_list==null)polygon_json_list=[]
+	if(urlPolygonAuteSave==1){
+		var polygon_json_list=JSON.parse(Cookies.get("polygon"));
+		if(polygon_json_list==null)polygon_json_list=[]
+	}
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
@@ -39,20 +41,22 @@ function createInitMap(){
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
 	
-	for(var i=0;i<polygon_json_list.length;i++){
-		polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
-		click_marker = new google.maps.Marker({
-			position: polygon_json_list[i],
-			map: map,
-			icon:"img/pin.png",
-		});
-		click_marker.addListener("click",function(e){
-			this.setMap(null);
-			delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
-			create_after_click();
-		});
-		marker_list.push(click_marker);
-		myPolygon.setPath(polygon_list);
+	if(urlPolygonAuteSave==1)
+		for(var i=0;i<polygon_json_list.length;i++){
+			polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
+			click_marker = new google.maps.Marker({
+				position: polygon_json_list[i],
+				map: map,
+				icon:"img/pin.png",
+			});
+			click_marker.addListener("click",function(e){
+				this.setMap(null);
+				delete_list(new google.maps.LatLng(e.latLng.lat(),e.latLng.lng()));
+				create_after_click();
+			});
+			marker_list.push(click_marker);
+			myPolygon.setPath(polygon_list);
+		}
 	}
 	
 	map.addListener("click",function(e){
@@ -73,7 +77,7 @@ function createInitMap(){
 }
 
 function create_after_click(){
-	myPolygon.setPath(polygon_list);
+	if(urlPolygonAuteSave==1)myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	Cookies.set("polygon", JSON.stringify(polygon_list));
 }
