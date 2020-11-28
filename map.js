@@ -30,8 +30,9 @@ function viewInitMap(){
 
 function createInitMap(){
 	var click_marker;
+	var polygon_json_list;
 	if(urlPolygonAuteSave==1){
-		var polygon_json_list=JSON.parse(Cookies.get("polygon"));
+		polygon_json_list=JSON.parse(Cookies.get("polygon"));
 		if(polygon_json_list==null)polygon_json_list=[]
 	}
 	map = new google.maps.Map(document.getElementById('map'), Options);
