@@ -40,6 +40,7 @@ function createInitMap(){
 			map: map,
 			icon:"img/pin.png",
 		});
+		marker_list.push(click_marker);
 	}
 	
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
