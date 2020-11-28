@@ -29,16 +29,16 @@ function viewInitMap(){
 }
 
 function createInitMap(){
-	console.log("4");
+	console.log("5");
 	var click_marker;
-	polygon_list=JSON.parse(Cookies.get("polygon"));
-	console.log(polygon_list)
+	var polygon_json_list=JSON.parse(Cookies.get("polygon"));
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	map.mapTypes.set(myMapTypeId, myMapType);
 	map.setMapTypeId(myMapTypeId);
-	for(var i=0;i<polygon_list.length;i++){
+	for(var i=0;i<polygon_json_list.length;i++){
+		polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
 		click_marker = new google.maps.Marker({
-			position: polygon_list[i],
+			position: polygon_json_list[i],
 			map: map,
 			icon:"img/pin.png",
 		});
