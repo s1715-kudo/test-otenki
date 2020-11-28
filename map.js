@@ -20,7 +20,6 @@ function initMap(){
 	};
 	createInitMap();
 	viewInitMap();
-	console.log(Cookies.get("polygon"))
 }
 
 function viewInitMap(){
@@ -30,6 +29,7 @@ function viewInitMap(){
 }
 
 function createInitMap(){
+	polygon_list=Cookies.get("polygon")
 	map = new google.maps.Map(document.getElementById('map'), Options);
 	var marker = new google.maps.Marker({
 		map:map,
