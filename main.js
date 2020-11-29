@@ -3,6 +3,7 @@ var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
 var polygon_color="#"+setKeyinit('polygon_color','000000');
 var urlPolygonAutoSave=setKeyinit('polygon_auto_save',1);
+if(urlPolygonAutoSave!=1)Cookies.remove("polygon");
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"
@@ -18,6 +19,7 @@ locate={lat:setKeyinit("map_lat",locate["lat"]),lng:setKeyinit("map_lng",locate[
 window.onload = function() {
 	$("body").css("background","#"+setKeyinit('background_color','98FB98'));
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
+	if(urlPolygonAutoSave==1)document.getElementById('autosave_text').innerHTML="前回作成したデータを読み込みました。"
 };
 
 function getDay(str) {
