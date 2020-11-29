@@ -3,7 +3,10 @@ var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
 var polygon_color="#"+setKeyinit('polygon_color','000000');
 var urlPolygonAutoSave=setKeyinit('polygon_auto_save',1);
-if(urlPolygonAutoSave!=1)Cookies.remove("polygon");
+if(urlPolygonAutoSave!=1){
+	Cookies.remove("polygon");
+	Cookies.remove("comment_text");
+}
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"
