@@ -45,7 +45,7 @@ $(document).ready(function(e) {
 
 $(function(){
 	getValue();
-	$('#mapForm textarea').bind('blur keydown keyup keypress change',function(){
+	$('#mapForm textarea').on('blur keydown keyup keypress change',function(){
 		getValue();
 	});
 });
