@@ -6,7 +6,6 @@ window.onload = function() {
 	if(urlPolygonAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0)){
 		document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p>"
 		document.mapForm.formComment.value=get_comment_text;
-		
 	}
 	
 	getValue();
