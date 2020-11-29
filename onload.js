@@ -3,7 +3,7 @@ window.onload = function() {
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	var get_comment_text=Cookies.get("comment_text");
 	if(get_comment_text==null)get_comment="";
-	if(urlPolygonAutoSave==1 && polygon_list.length!=0 && get_comment_text.length!=0){
+	if(urlPolygonAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0)){
 		document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p>"
 		document.mapForm.formComment.value=get_comment_text;
 		
