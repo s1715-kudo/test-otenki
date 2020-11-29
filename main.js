@@ -42,3 +42,14 @@ function setKeyinit(key,value){
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
 });
+
+$(function(){
+	getValue();
+	$('#mapForm textarea').bind('blur keydown keyup keypress change',function(){
+		getValue();
+	});
+});
+
+function getValue() {
+	console.log($('textarea[name=formComent]').val());
+}
