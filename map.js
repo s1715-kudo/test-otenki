@@ -144,5 +144,5 @@ function polygon_list_center(){
 		lat+=polygon_list[i].lat()
 		lng+=polygon_list[i].lng()
 	}
-	return new google.maps.LatLng((lat/polygon_list.length),(lng/polygon_list.length),false)
+	return (new google.maps.LatLng((lat/polygon_list.length),(lng/polygon_list.length),false))
 }
