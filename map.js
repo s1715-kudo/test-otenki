@@ -139,10 +139,13 @@ function comment_reset(){
 }
 
 function polygon_list_center(){
-	var lat=0,lng=0;
-	for(var i=0;i<polygon_list.length;i++){
-		lat+=polygon_list[i].lat()
-		lng+=polygon_list[i].lng()
+	if(polygon_list.length!=0)
+		var lat=0,lng=0;
+		for(var i=0;i<polygon_list.length;i++){
+			lat+=polygon_list[i].lat()
+			lng+=polygon_list[i].lng()
+		}
+		return (new google.maps.LatLng((lat/polygon_list.length),(lng/polygon_list.length),false))
 	}
-	return (new google.maps.LatLng((lat/polygon_list.length),(lng/polygon_list.length),false))
+	else return null;
 }
