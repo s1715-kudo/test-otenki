@@ -8,6 +8,8 @@ window.onload = function() {
 		if(result){
 			document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p><input type='button' value='リセット' onclick='comment_reset()'>"
 			document.forms.mapForm.formComment.value=get_comment_text;
+			polygon_list_center();
+			//map.panTo()
 		}
 		else{
 			comment_reset();

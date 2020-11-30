@@ -137,3 +137,12 @@ function comment_reset(){
 	if(urlCommentAutoSave==1)Cookies.set("comment_text","");
 	document.getElementById('autosave_text').innerHTML=""
 }
+
+function polygon_list_center(){
+	var lat,lng;
+	for(var i=0;i<polygon_list.length;i++){
+		console.log(polygon_list[i]["lat"])
+		console.log(polygon_list[i]["lng"])
+	}
+	//return 
+}
