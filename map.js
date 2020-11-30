@@ -139,7 +139,7 @@ function comment_reset(){
 }
 
 function polygon_list_center(){
-	var lat,lng;
+	var lat=0,lng=0;
 	for(var i=0;i<polygon_list.length;i++){
 		lat+=polygon_list[i].lat()
 		lng+=polygon_list[i].lng()
