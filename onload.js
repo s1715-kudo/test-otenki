@@ -4,7 +4,7 @@ window.onload = function() {
 	var get_comment_text=Cookies.get("comment_text");
 	if(get_comment_text==null || get_comment_text===undefined)get_comment_text="";
 	if(urlPolygonAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0)){
-		document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p>"
+		document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p><input type='button' value='リセット' onclick='comment_reset()'>"
 		document.forms.mapForm.formComment.value=get_comment_text;
 	}
 	
@@ -23,5 +23,5 @@ window.onload = function() {
 function getValue() {
 	var $formObject = document.getElementById( "mapForm" );
 	var comment_text = $formObject.formComment.value;
-	if(urlPolygonAutoSave==1)Cookies.set("comment_text", comment_text);
+	if(urlCommentAutoSave==1)Cookies.set("comment_text", comment_text);
 }

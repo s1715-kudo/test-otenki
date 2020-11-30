@@ -2,8 +2,8 @@ var urlPlaceKey=setKeyinit('place','ume');
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
 var polygon_color="#"+setKeyinit('polygon_color','000000');
-var urlPolygonAutoSave=setKeyinit('polygon_auto_save',1);
-if(urlPolygonAutoSave!=1){
+var urlCommentAutoSave=setKeyinit('comment_auto_save',1);
+if(urlCommentAutoSave!=1){
 	Cookies.remove("polygon");
 	Cookies.remove("comment_text");
 }

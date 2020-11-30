@@ -32,7 +32,7 @@ function createInitMap(){
 	var click_marker;
 	var polygon_cookie_list=Cookies.get("polygon");
 	var polygon_json_list;
-	if(polygon_cookie_list==null || urlPolygonAutoSave!=1)polygon_json_list=[]
+	if(polygon_cookie_list==null || urlCommentAutoSave!=1)polygon_json_list=[]
 	else polygon_json_list=JSON.parse(polygon_cookie_list);
 	
 	map = new google.maps.Map(document.getElementById('map'), Options);
@@ -42,7 +42,7 @@ function createInitMap(){
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
 	
-	if(urlPolygonAutoSave==1){
+	if(urlCommentAutoSave==1){
 		for(var i=0;i<polygon_json_list.length;i++){
 			polygon_list.push(new google.maps.LatLng(polygon_json_list[i]["lat"],polygon_json_list[i]["lng"]))
 			click_marker = new google.maps.Marker({
@@ -80,7 +80,7 @@ function createInitMap(){
 function create_after_click(){
 	myPolygon.setPath(polygon_list);
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
-	if(urlPolygonAutoSave==1)Cookies.set("polygon", JSON.stringify(polygon_list));
+	if(urlCommentAutoSave==1)Cookies.set("polygon", JSON.stringify(polygon_list));
 }
 
 function delete_list(list){
@@ -129,4 +129,10 @@ function map_send(){
 	Cookies.remove("polygon");
 	Cookies.remove("comment_text");
 	console.log(input_message);
+}
+
+function comment_reset(){
+	map_clear();
+	document.forms.mapForm.formComment.value="";
+	if(urlCommentAutoSave==1)Cookies.set("comment_text","");
 }
