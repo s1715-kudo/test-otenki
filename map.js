@@ -135,4 +135,5 @@ function comment_reset(){
 	map_clear();
 	document.forms.mapForm.formComment.value="";
 	if(urlCommentAutoSave==1)Cookies.set("comment_text","");
+	document.getElementById('autosave_text').innerHTML=""
 }
