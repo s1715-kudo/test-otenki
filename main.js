@@ -13,16 +13,7 @@ var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/
 
 var locate={lat:33.2375507,lng:131.6192692};
 
-$.ajax({
-	async: true,
-	type: "POST",
-	url: "/Page/Method",
-	contentType: "application/json",
-	data: JSON.stringify({ ParameterName: paramValue }),
-});
-
-
-//$.ajaxSetup({async: false});
+$.ajaxSetup({async: true});
 $.getJSON(amedas_url, function(data){
 	locate={lat:data["場所"]["geocoding"][0],lng:data["場所"]["geocoding"][1]}
 });
