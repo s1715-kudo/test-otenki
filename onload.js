@@ -4,7 +4,7 @@ window.onload = function() {
 	var get_comment_text=Cookies.get("comment_text");
 	if(get_comment_text==null || get_comment_text===undefined)get_comment_text="";
 	if(urlCommentAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0)){
-		var result=confirm("前回作成したデータがあります。<br>ロードしますか？");
+		var result=confirm("前回作成したコメントのデータがあります。ロードしますか？");
 		if(result){
 			document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p><input type='button' value='リセット' onclick='comment_reset()'>"
 			document.forms.mapForm.formComment.value=get_comment_text;
