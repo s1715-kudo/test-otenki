@@ -141,8 +141,8 @@ function comment_reset(){
 function polygon_list_center(){
 	var lat,lng;
 	for(var i=0;i<polygon_list.length;i++){
-		console.log(polygon_list[i]["lat"])
-		console.log(polygon_list[i]["lng"])
+		lat+=polygon_list[i].lat()
+		lng+=polygon_list[i].lng()
 	}
-	//return 
+	return new google.maps.LatLng((lat/polygon_list.length),(lng/polygon_list.length),false)
 }
