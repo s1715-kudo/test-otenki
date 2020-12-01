@@ -12,7 +12,7 @@ function amedas(small){
 		unit_list["日照時間"]="h"
 		unit_list["積雪深"]="cm"
 		
-		insert += "<table border='1'>"
+		insert += "<table border='1' style='border-collapse: collapse'>"
 		var dateArray = Object.keys(data)
 		dateArray = dateArray.filter(n => n !== "場所")
 		

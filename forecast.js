@@ -18,7 +18,7 @@ function forecast(){
 		unit_list["最低気温"]="℃"
 		unit_list["風速"]="m/s"
 		
-		insert += "<table border='1'>"
+		insert += "<table border='1' style='border-collapse: collapse'>"
 		var dateArray = Object.keys(data[fl[fn]])
 		for (const i of Object.keys(data[fl[fn]][dateArray[0]])) {
 			if(i!="icon"){
