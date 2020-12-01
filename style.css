@@ -24,8 +24,8 @@ th{
 
 .data_area {
 	position: absolute;
-	width: 600px;
-	left: calc(50% - 300px);
+	width: 800px;
+	left: calc(50% - 400px);
 	top: 500px;
 	margin: auto;
 	flex-wrap: wrap;
@@ -35,13 +35,16 @@ th{
 .tab_class {
 	width: calc(100%/4);
 	height: 50px;
-	background-color: darkgrey;
+	background: #99FFFF;
+	color: #339933;
 	line-height: 50px;
 	font-size: 15px;
 	text-align: center;
 	display: block;
 	float: left;
 	order: -1;
+	border: solid 1px #00FF33;
+	box-sizing: border-box;
 }
 
 input[name="tab_name"] {
@@ -49,18 +52,29 @@ input[name="tab_name"] {
 }
  
 input:checked + .tab_class {
-	background-color: cadetblue;
-	color: aliceblue;
+	background: #99FF66;
+	color: #339933;
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
  
 .content_class {
 	display: none;
 	width: 100%;
 	height:100%;
+	top:100px;
+	background:#CCFFCC;
+	padding:50px;
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
  
 input:checked + .tab_class + .content_class {
 	display: block;
+}
+
+#site_up{
+	position: fixed;
+	left:200px;
+	top:90%;
 }
 
 #map,#map2{
@@ -71,6 +85,9 @@ input:checked + .tab_class + .content_class {
 
 
 @media screen and (max-width:900px) {
+	td{
+		font-size:14px;
+	}
 	.site_head{
 		width: 90%;
 		left: 5%;
@@ -85,9 +102,23 @@ input:checked + .tab_class + .content_class {
 		left: 5%;
 		top: 600px;
 	}
+	#site_up{
+		position: fixed;
+		left:5px;
+		top:90%;
+	}
+	#map,#map2{
+		width: 80%;
+	}
 }
 
 @media screen and (max-width:500px) {
+	th{
+		font-size:8px;
+	}
+	td{
+		font-size:5px;
+	}
 	.site_head{
 		top: 80px;
 	}
@@ -107,10 +138,7 @@ input:checked + .tab_class + .content_class {
 	
 	.content_class {
 		width: 100%;
-	}
-	
-	#map,#map2{
-		width: 80%;
+		padding:5px;
 	}
 
 }

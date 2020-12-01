@@ -13,11 +13,10 @@ var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/
 
 var locate={lat:33.2375507,lng:131.6192692};
 
-$.ajaxSetup({async: false});
+$.ajaxSetup({async: true});
 $.getJSON(amedas_url, function(data){
 	locate={lat:data["場所"]["geocoding"][0],lng:data["場所"]["geocoding"][1]}
 });
-$.ajaxSetup({async: true});
 locate={lat:setKeyinit("map_lat",locate["lat"]),lng:setKeyinit("map_lng",locate["lng"])}
 
 function getDay(str) {
@@ -45,4 +44,18 @@ function setKeyinit(key,value){
 
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
+});
+
+$(function() {
+	size();
+	$(window).on("resize", function() {size();});
+	function size() {
+		width = $(window).width();
+		if(width<=900){
+			amedas(true)
+		}
+		else{
+			amedas(false)
+		}
+	}
 });
