@@ -114,10 +114,10 @@ input:checked + .tab_class + .content_class {
 
 @media screen and (max-width:500px) {
 	th{
-		font-size: 2vw;
+		font-size: 4vw;
 	}
 	td{
-		font-size: 1vw;
+		font-size: 3vw;
 	}
 	.site_head{
 		top: 80px;
