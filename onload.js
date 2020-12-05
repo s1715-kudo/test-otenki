@@ -5,7 +5,7 @@ $(window).on('load', function(){
 	var get_polygon_color=Cookies.get("polygon_color");
 	if(get_comment_text==null || get_comment_text===undefined)get_comment_text="";
 	if(get_polygon_color==null || get_polygon_color===undefined)get_polygon_color="#000000";
-	if(urlCommentAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0 || get_polygon_color!="#000000")){
+	if(urlCommentAutoSave==1 && (polygon_list.length!=0 || get_comment_text.length!=0)){
 		var result=confirm("前回作成したコメントのデータがあります。ロードしますか？");
 		if(result){
 			document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p><input type='button' value='リセット' onclick='comment_reset()'>"
