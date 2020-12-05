@@ -32,7 +32,7 @@ body{
 
 .circles{
 	position: absolute;
-	top: 100px;
+	top: 0px;
 	left: 0;
 	width: 100%;
 	height: 100%;
@@ -47,7 +47,7 @@ body{
 	height: 20px;
 	background: rgba(255, 255, 255, 0.6);
 	animation: animate 25s linear infinite;
-	bottom: -150px;
+	bottom: -200px;
 }
 
 .circles li:nth-child(1){

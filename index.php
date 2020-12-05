@@ -37,7 +37,7 @@
 			<li></li>
 		</ul>
 	</div>
-	<a class="logo" href="index.html"><img src="img/logo.png" width="12%" height="12%"></a>
+	<a class="logo" href="index.php"><img src="img/logo.png" width="12%" height="12%"></a>
 	<div class="site_head">
 		<center>
 			<h1>未来の農業がここにある</h1>
@@ -45,26 +45,26 @@
 			<img id="oita_img" src="img/oita.png" usemap="#link">
 		</center>
 		<map name="link">
-			<area shape="circle" coords="252,28,10" href="index.html?place=kunimi" alt="国見">
-			<area shape="circle" coords="125,60,10" href="index.html?place=nakatsu" alt="中津">
-			<area shape="circle" coords="195,70,10" href="index.html?place=bungo-takata" alt="豊後高田">
-			<area shape="circle" coords="254,122,10" href="index.html?place=kitsuki" alt="杵築">
-			<area shape="circle" coords="157,126,10" href="index.html?place=innnai" alt="院内">
-			<area shape="circle" coords="110,177,10" href="index.html?place=kusu" alt="玖珠">
-			<area shape="circle" coords="160,184,10" href="index.html?place=yufuin" alt="湯布院">
-			<area shape="circle" coords="178,312,10" href="index.html?place=taketa" alt="竹田">
-			<area shape="circle" coords="259,250,10" href="index.html?place=inukai" alt="犬飼">
-			<area shape="circle" coords="257,348,10" href="index.html?place=ume" alt="宇目">
-			<area shape="circle" coords="342,305,10" href="index.html?place=saiki" alt="佐伯">
-			<area shape="circle" coords="350,362,10" href="index.html?place=kamae" alt="蒲江">
+			<area shape="circle" coords="252,28,10" href="index.php?place=kunimi" alt="国見">
+			<area shape="circle" coords="125,60,10" href="index.php?place=nakatsu" alt="中津">
+			<area shape="circle" coords="195,70,10" href="index.php?place=bungo-takata" alt="豊後高田">
+			<area shape="circle" coords="254,122,10" href="index.php?place=kitsuki" alt="杵築">
+			<area shape="circle" coords="157,126,10" href="index.php?place=innnai" alt="院内">
+			<area shape="circle" coords="110,177,10" href="index.php?place=kusu" alt="玖珠">
+			<area shape="circle" coords="160,184,10" href="index.php?place=yufuin" alt="湯布院">
+			<area shape="circle" coords="178,312,10" href="index.php?place=taketa" alt="竹田">
+			<area shape="circle" coords="259,250,10" href="index.php?place=inukai" alt="犬飼">
+			<area shape="circle" coords="257,348,10" href="index.php?place=ume" alt="宇目">
+			<area shape="circle" coords="342,305,10" href="index.php?place=saiki" alt="佐伯">
+			<area shape="circle" coords="350,362,10" href="index.php?place=kamae" alt="蒲江">
 			
-			<area shape="circle" coords="125,100,10" href="index.html?place=yabakei" alt="耶馬渓">
-			<area shape="circle" coords="285,100,10" href="index.html?place=musashi" alt="武蔵">
-			<area shape="circle" coords="40,177,10" href="index.html?place=hita" alt="日田">
-			<area shape="circle" coords="260,198,10" href="index.html?place=oita" alt="大分">
-			<area shape="circle" coords="338,192,10" href="index.html?place=saganoseki" alt="佐賀関">
-			<area shape="circle" coords="28,230,10" href="index.html?place=tsubakigahana" alt="椿ヶ鼻">
-			<area shape="circle" coords="310,245,10" href="index.html?place=usuki" alt="臼杵">
+			<area shape="circle" coords="125,100,10" href="index.php?place=yabakei" alt="耶馬渓">
+			<area shape="circle" coords="285,100,10" href="index.php?place=musashi" alt="武蔵">
+			<area shape="circle" coords="40,177,10" href="index.php?place=hita" alt="日田">
+			<area shape="circle" coords="260,198,10" href="index.php?place=oita" alt="大分">
+			<area shape="circle" coords="338,192,10" href="index.php?place=saganoseki" alt="佐賀関">
+			<area shape="circle" coords="28,230,10" href="index.php?place=tsubakigahana" alt="椿ヶ鼻">
+			<area shape="circle" coords="310,245,10" href="index.php?place=usuki" alt="臼杵">
 		</map>
 	</div>
 	<div class="data_area">
