@@ -1,4 +1,4 @@
-window.onload = function() {
+$(window).on('load', function(){
 	console.log("a");
 	$("body").css("background","#"+setKeyinit('background_color','98FB98'));
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
@@ -31,7 +31,7 @@ window.onload = function() {
 			getValue();
 		};
 	}
-};
+})
 
 function getValue() {
 	var $formObject = document.getElementById( "mapForm" );
