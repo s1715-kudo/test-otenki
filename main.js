@@ -6,6 +6,10 @@ var urlCommentAutoSave=setKeyinit('comment_auto_save',1);
 if(urlCommentAutoSave!=1){
 	Cookies.remove("polygon");
 	Cookies.remove("comment_text");
+	Cookies.remove("polygon_color");
+}
+else{
+	if(polygon_color!="#000000")Cookies.set("polygon_color",polygon_color);
 }
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
@@ -62,5 +66,6 @@ $(function() {
 	$("#select_color").on("change", function(){
 		polygon_color=$(this).val()
 		myPolygon.setOptions({ fillColor:polygon_color,strokeColor:polygon_color});
+		if(urlCommentAutoSave==1)Cookies.set("polygon_color",polygon_color);
 	});
 });

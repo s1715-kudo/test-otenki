@@ -109,6 +109,7 @@ function map_clear(){
 	}
 	marker_list=[]
 	myPolygon.setMap(null);
+	polygon_color="#000000"
 	myPolygon=new google.maps.Polygon({path:polygon_list,strokeColor:polygon_color,fillColor:polygon_color});
 	myPolygon.setMap(map);
 	create_after_click();
@@ -128,6 +129,7 @@ function map_send(){
 	var input_message = document.forms.mapForm.formComment.value;
 	Cookies.remove("polygon");
 	Cookies.remove("comment_text");
+	Cookies.remove("polygon_color");
 	console.log(input_message);
 }
 
@@ -135,6 +137,7 @@ function comment_reset(){
 	map_clear();
 	document.forms.mapForm.formComment.value="";
 	if(urlCommentAutoSave==1)Cookies.set("comment_text","");
+	if(urlCommentAutoSave==1)Cookies.set("polygon_color","");
 	document.getElementById('autosave_text').innerHTML=""
 }
 
