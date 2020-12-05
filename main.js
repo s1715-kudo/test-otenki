@@ -1,7 +1,7 @@
 var urlPlaceKey=setKeyinit('place','ume');
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
-var polygon_color="#"+setKeyinit('polygon_color','000000');
+var polygon_color="#000000"
 var urlCommentAutoSave=setKeyinit('comment_auto_save',1);
 if(urlCommentAutoSave!=1){
 	Cookies.remove("polygon");
@@ -9,7 +9,7 @@ if(urlCommentAutoSave!=1){
 	Cookies.remove("polygon_color");
 }
 else{
-	if(polygon_color!="#000000")Cookies.set("polygon_color",polygon_color);
+	Cookies.set("polygon_color",polygon_color);
 }
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"

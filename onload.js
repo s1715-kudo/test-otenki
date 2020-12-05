@@ -11,7 +11,6 @@ $(window).on('load', function(){
 			document.getElementById('autosave_text').innerHTML="<p>前回作成したデータを読み込みました。</p><input type='button' value='リセット' onclick='comment_reset()'>"
 			document.forms.mapForm.formComment.value=get_comment_text;
 			polygon_color=get_polygon_color;
-			console.log(polygon_color,get_polygon_color);
 			myPolygon.setOptions({ fillColor:polygon_color,strokeColor:polygon_color});
 			var polygon_center=polygon_list_center();
 			if(polygon_center!=null)map.panTo(polygon_center)
