@@ -8,9 +8,6 @@ if(urlCommentAutoSave!=1){
 	Cookies.remove("comment_text");
 	Cookies.remove("polygon_color");
 }
-else{
-	Cookies.set("polygon_color",polygon_color);
-}
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"
