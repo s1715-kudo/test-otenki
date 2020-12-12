@@ -1,3 +1,5 @@
+var icontypelist={};
+icontypelist["weathernews"]=1024;
 var urlPlaceKey=setKeyinit('place','ume');
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlForecastStringKey=setKeyinit('forecast_string',1);
@@ -12,7 +14,7 @@ if(urlCommentAutoSave!=1){
 
 var urlForecastKey=setKeyinit('forecast',0);
 if(urlForecastKey==1){
-	urlForecastIconKey=1;
+	urlForecastIconKey=icontypelist["weathernews"];
 	urlForecastStringKey=0;
 }
 

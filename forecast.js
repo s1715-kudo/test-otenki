@@ -54,7 +54,7 @@ function forecast(small,small2){
 					var _data="img/logo.png";
 					var icon_size=30;
 					var aspect=1
-					if(urlForecastIconKey==1){
+					if(urlForecastIconKey==icontypelist["weathernews"]){
 						_data=data[fl[fn]][i][j]
 						aspect=152/112
 					}
