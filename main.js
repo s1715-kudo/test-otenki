@@ -10,6 +10,12 @@ if(urlCommentAutoSave!=1){
 	Cookies.remove("polygon_color");
 }
 
+var urlForecastKey=setKeyinit('forecast',0);
+if(urlForecastKey==1){
+	urlForecastIconKey=1;
+	urlForecastStringKey=0;
+}
+
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"
 

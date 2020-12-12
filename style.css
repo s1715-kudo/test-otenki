@@ -3,6 +3,10 @@ th{
 	background: #99FF66;
 }
 
+td,th{
+	padding: 2px;
+}
+
 .font_red{
 	color:red;
 }
@@ -146,6 +150,7 @@ input:checked + .tab_class + .content_class {
 	
 	.tab_class {
 		width: calc(100%/4);
+		font-size:5vw;
 	}
 	
 	.content_class {
@@ -155,8 +160,14 @@ input:checked + .tab_class + .content_class {
 
 }
 
-@media screen and (max-width:500px) {
-	.tab_class {
-		font-size:5vw;
+@media screen and (max-width:200px) {
+	th{
+		font-size:2vw;
+	}
+	td{
+		font-size:1vw;
+	}
+	td,th{
+		padding: 0;
 	}
 }
