@@ -43,7 +43,7 @@ function forecast(small,small2){
 						var getday=getDay(_data)
 						unit_text+="("+getday+")"
 						if(getday=="土")td_color="class='font_blue'"
-						if(getday=="日")td_color="class='font_red'"
+						if(getday=="日" || isHoliday(_data))td_color="class='font_red'"
 						if(small2){
 							_data=_data.slice(5);
 						}
