@@ -6,7 +6,7 @@ function amedas(small,small2){
 		var unit_list=[]
 		unit_list["気温"]="℃"
 		unit_list["湿度"]="％"
-		unit_list["湿度"]="Pa"
+		unit_list["気圧"]="Pa"
 		unit_list["降水量"]="mm"
 		unit_list["風速"]="m/s"
 		unit_list["日照時間"]="h"

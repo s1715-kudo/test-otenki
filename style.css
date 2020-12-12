@@ -1,5 +1,6 @@
 th{
 	font-weight:bold;
+	background: #99FF66;
 }
 
 .font_red{
@@ -9,6 +10,11 @@ th{
 .font_blue{
 	color:blue
 }	
+
+.line_margin{
+	margin-top:5px;
+	margin-bottom:5px;
+}
 
 .logo{
 	position: absolute;
@@ -47,6 +53,7 @@ th{
 	color: #339933;
 	line-height: 50px;
 	font-size: 15px;
+	font-weight:bold;
 	text-align: center;
 	display: block;
 	float: left;

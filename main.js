@@ -1,5 +1,6 @@
 var urlPlaceKey=setKeyinit('place','ume');
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
+var urlForecastStringKey=setKeyinit('forecast_string',1);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
 var polygon_color="#000000"
 var urlCommentAutoSave=setKeyinit('comment_auto_save',1);

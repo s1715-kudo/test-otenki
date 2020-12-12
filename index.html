@@ -107,14 +107,14 @@
 				<br>
 				<div id="map"></div>
 				<div id="map_info">
-					<br>
-					<input type="button" value="一つ戻る" onclick="map_back();"/>
-					<input type="button" value="消去" onclick="map_clear();"/>
-					<p>
-						色の変更
-						<input type="color" id="select_color" />
+					<p class="line_margin">
+						<input type="button" value="一つ戻る" onclick="map_back();"/>
+						<input type="button" value="消去" onclick="map_clear();"/>
 					</p>
-					<p id="polygon_area">0.00㎡</p>
+					<p class="line_margin">
+						色の変更<input type="color" id="select_color" />
+					</p>
+					<p id="polygon_area" class="line_margin">0.00㎡</p>
 					<form id="mapForm">
 						コメント欄<br>
 						<textarea id="formComment"></textarea>

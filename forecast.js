@@ -21,7 +21,7 @@ function forecast(small,small2){
 		insert += "<table border='1' style='border-collapse: collapse'>"
 		var dateArray = Object.keys(data[fl[fn]])
 		for (const i of Object.keys(data[fl[fn]][dateArray[0]])) {
-			if(i!="icon"){
+			if(i!="icon" && !(i=="天気"&&urlForecastStringKey==0)){
 				insert += "<th align='center'>"+i+"</th>"
 			}
 			else if(i=="icon" && urlForecastIconKey!=0){
@@ -33,7 +33,7 @@ function forecast(small,small2){
 			insert += "<tr>"
 			var data_type = Object.keys(data[fl[fn]][i])
 			for (const j of data_type) {
-				if(j!="icon"){
+				if(j!="icon" && !(j=="天気"&&urlForecastStringKey==0)){
 					var _data=data[fl[fn]][i][j]
 					var td_color=""
 					var unit_text=unit_list[j]
@@ -51,8 +51,16 @@ function forecast(small,small2){
 					insert += "<td align='center'>"+_data+"<span "+td_color+">"+unit_text+"</span></td>"
 				}
 				else if(urlForecastIconKey!=0 && j=="icon"){
-					var _data=data[fl[fn]][i][j]
-					insert += "<td align='center'><img src='"+_data+"' width='25%' height='25%'></td>"
+					var _data="img/logo.png";
+					var icon_size=30;
+					var aspect=1
+					if(urlForecastIconKey==1){
+						_data=data[fl[fn]][i][j]
+						aspect=152/112
+					}
+					if(small)icon_size=20;
+					if(small2)icon_size=10;
+					insert += "<td align='center'><img src='"+_data+"' width="+Math.round(icon_size*aspect)+"px height="+icon_size+"px></td>"
 				}
 			}
 			insert += "</tr>"
