@@ -1,6 +1,12 @@
 var icontypelist={};
 icontypelist["weathernews"]=1024;
-var urlPlaceKey=setKeyinit('place','ume');
+
+var preplace=Cookies.get('place');
+if (preplace===undefined||preplace==null)preplace="ume"
+
+var urlPlaceKey=setKeyinit('place',preplace);
+Cookies.set('place',urlPlaceKey,{expires:7});
+
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
 var urlForecastStringKey=setKeyinit('forecast_string',1);
 var urlMapZoomKey=setKeyinit('map_zoom',13);
