@@ -3,14 +3,14 @@ var fn=0
 
 function click_forecast(){
 	fn=(fn+1)%fl.length
-	forecast()
+	forecast(false,false)
 }
 
-function forecast(){
+function forecast(small,small2){
 	$(function(){
 		var insert="<br>"
 		$.getJSON(forecast_url, function(data){
-		unit_list=[]
+		var unit_list=[]
 		unit_list["降水量"]="mm/h"
 		unit_list["降水確率"]="%"
 		unit_list["気温"]="℃"
@@ -35,13 +35,20 @@ function forecast(){
 			for (const j of data_type) {
 				if(j!="icon"){
 					var _data=data[fl[fn]][i][j]
+					var td_color=""
+					var unit_text=unit_list[j]
+					if(typeof unit_text==="undefined")unit_text=""
 					if(j.match(/日付/)){
 						_data=_data.slice(0,4)+"/"+_data.slice(4,6)+"/"+_data.slice(6)
-						_data+="("+getDay(_data)+")"
+						var getday=getDay(_data)
+						unit_text+="("+getday+")"
+						if(getday=="土")td_color="class='font_blue'"
+						if(getday=="日")td_color="class='font_red'"
+						if(small2){
+							_data=_data.slice(5);
+						}
 					}
-					unit_text=unit_list[j]
-					if(typeof unit_text==="undefined")unit_text=""
-					insert += "<td align='center'>"+_data+unit_text+"</td>"
+					insert += "<td align='center'>"+_data+"<span "+td_color+">"+unit_text+"</span></td>"
 				}
 				else if(urlForecastIconKey!=0 && j=="icon"){
 					var _data=data[fl[fn]][i][j]
@@ -56,4 +63,4 @@ function forecast(){
 	});
 }
 
-forecast()
+forecast(false,false)

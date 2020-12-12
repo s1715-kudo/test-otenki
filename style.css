@@ -2,6 +2,14 @@ th{
 	font-weight:bold;
 }
 
+.font_red{
+	color:red;
+}
+
+.font_blue{
+	color:blue
+}	
+
 .logo{
 	position: absolute;
 	left: 0px;
@@ -138,4 +146,10 @@ input:checked + .tab_class + .content_class {
 		padding:5px;
 	}
 
+}
+
+@media screen and (max-width:500px) {
+	.tab_class {
+		font-size:5vw;
+	}
 }

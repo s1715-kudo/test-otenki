@@ -52,12 +52,12 @@ $(function() {
 	$(window).on("resize", function() {size();});
 	function size() {
 		width = $(window).width();
-		if(width<=900){
-			amedas(true)
-		}
-		else{
-			amedas(false)
-		}
+		var small=false;
+		var small2=false;
+		if(width<=300)small2=true
+		if(width<=900)small=true;
+		amedas(small,small2)
+		forecast(small,small2)
 	}
 	
 	$("#select_color").on("change", function(){
