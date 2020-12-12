@@ -5,6 +5,18 @@ var preplace=Cookies.get('place');
 if (preplace===undefined||preplace==null)preplace="ume"
 
 var urlPlaceKey=setKeyinit('place',preplace);
+
+$.ajax({
+	url: "https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json",
+	type: 'GET',
+	statusCode: {
+		404: function() {
+			alert('対応していない場所です！');
+			window.location.href = (location.href.replace("place="+encodeURIComponent(urlPlaceKey),"place=ume"))
+		}
+	}
+});
+
 Cookies.set('place',urlPlaceKey,{expires:7});
 
 var urlForecastIconKey=setKeyinit('forecast_icon',0);
@@ -26,17 +38,6 @@ if(urlForecastKey==1){
 
 var amedas_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json"
 var forecast_url="https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/forecast/"+urlPlaceKey+".json"
-
-$.ajax({
-	url: "https://raw.githubusercontent.com/s1715-kudo/weather/gh-pages/amedas/"+urlPlaceKey+".json",
-	type: 'GET',
-	statusCode: {
-		404: function() {
-			alert('対応していない場所です！');
-			window.location.href = (location.href.replace("place="+encodeURIComponent(urlPlaceKey),"place=ume"))
-		}
-	}
-});
 
 var locate={lat:33.2375507,lng:131.6192692};
 $.ajaxSetup({async: false});
