@@ -27,7 +27,7 @@ $.ajax({
 	statusCode: {
 		404: function() {
 			alert('対応していない場所です！');
-			window.location.href = (location.href.replace("place="+urlPlaceKey,"place=ume"))
+			window.location.href = (location.href.replace("place="+encodeURIComponent(urlPlaceKey),"place=ume"))
 		}
 	}
 });
