@@ -85,8 +85,11 @@ input:checked + .tab_class + .content_class {
 
 
 @media screen and (max-width:900px) {
+	th{
+		font-size:3vw;
+	}
 	td{
-		font-size:14px;
+		font-size:2vw;
 	}
 	.site_head{
 		width: 90%;
@@ -113,12 +116,6 @@ input:checked + .tab_class + .content_class {
 }
 
 @media screen and (max-width:500px) {
-	th{
-		font-size:8px;
-	}
-	td{
-		font-size:5px;
-	}
 	.site_head{
 		top: 80px;
 	}
