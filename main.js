@@ -70,6 +70,11 @@ function setKeyinit(key,value){
 	return url_key;
 }
 
+function changeAreaMapText(str){
+	document.getElementById('oitamaptext').innerHTML=str;
+}
+
+
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
 });
