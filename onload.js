@@ -1,5 +1,5 @@
 $(window).on('load', function(){
-	$("body").css("background","#"+setKeyinit('background_color','98FB98'));
+	$("body").css("background","#"+setKeyinit('background_color','F8F8FF'));
 	document.getElementById('polygon_area').innerHTML=google.maps.geometry.spherical.computeArea(polygon_list).toFixed(2)+"㎡";
 	var get_comment_text=Cookies.get("comment_text");
 	var get_polygon_color=Cookies.get("polygon_color");
