@@ -71,7 +71,7 @@ function setKeyinit(key,value){
 }
 
 function changeAreaMapText(str){
-	//document.getElementById('oitamaptext').innerHTML=str;
+	document.getElementById('oitamaptext').innerHTML=str;
 }
 
 

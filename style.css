@@ -85,6 +85,9 @@ td,th{
 	font-family: "HG行書体";
 }
 
+#oitamaptext{
+	font-size:14px;
+}
 .site_fooder {
 	position: relative;
 	left: calc(50% - 250px);
