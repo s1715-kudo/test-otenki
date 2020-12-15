@@ -22,7 +22,7 @@ body{
 
 th{
 	font-weight:bold;
-	background: #99FF66;
+	background: #c0c0c0;
 }
 
 td,th{
@@ -98,7 +98,7 @@ td,th{
 .tab_class {
 	width: calc(100%/4);
 	height: 50px;
-	background: #99FFFF;
+	background: #c0c0c0;
 	color: #339933;
 	line-height: 50px;
 	font-size: 15px;
@@ -107,7 +107,7 @@ td,th{
 	display: block;
 	float: left;
 	order: -1;
-	border: solid 1px #00FF33;
+	border: solid 1px #000000;
 	box-sizing: border-box;
 }
 
